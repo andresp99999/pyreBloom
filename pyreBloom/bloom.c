@@ -111,16 +111,16 @@ int init_pyrebloom(
     }
 
     /* Select the appropriate DB */
-    redisReply * reply = NULL;
-    reply = redisCommand(ctxt->ctxt, "SELECT %i", db);
-    if (reply->type == REDIS_REPLY_ERROR) {
-        strncpy(ctxt->ctxt->errstr, reply->str, errstr_size);
-        freeReplyObject(reply);
-        /* Shut it down. */
-        free_pyrebloom(ctxt);
-        return PYREBLOOM_ERROR;
-    }
-    freeReplyObject(reply);
+    // redisReply * reply = NULL;
+    // reply = redisCommand(ctxt->ctxt, "SELECT %i", db);
+    // if (reply->type == REDIS_REPLY_ERROR) {
+    //     strncpy(ctxt->ctxt->errstr, reply->str, errstr_size);
+    //     freeReplyObject(reply);
+    //     /* Shut it down. */
+    //     free_pyrebloom(ctxt);
+    //     return PYREBLOOM_ERROR;
+    // }
+    // freeReplyObject(reply);
 
     /* If we've made it this far, we're ok. */
     return PYREBLOOM_OK;
