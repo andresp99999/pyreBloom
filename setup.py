@@ -20,7 +20,7 @@ ext_modules = [Extension("pyreBloom", ext_files, libraries=['hiredis'],
                          include_dirs=['/usr/local/include'])]
 
 setup(
-    name = 'pyreBloom-dev',
+    name = 'pyreBloom',
     version = '1.0.3',
     author = 'Dan Lecocq',
     author_email = 'dan@seomoz.org',
